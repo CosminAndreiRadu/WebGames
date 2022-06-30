@@ -1,0 +1,69 @@
+
+body {
+    height: 100%;
+    width: 100%;
+ 
+}
+  
+.background{
+    height: 100%;
+    width: 100%;
+    background-image: url("imagesMermaid/istockphoto-1143347756-170667a.jpg");
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    display: block;
+
+
+}
+
+.title{
+    position: fixed;
+    z-index: 10;
+    font-size: 350%;
+    font-weight: 100;
+    color:rgb(76, 240, 191);
+    top: 60%;
+    left: 38%;
+    text-align: center;
+    font-family: fantasy;
+}
+.actions{
+    position: fixed;
+    z-index: 10;
+    font-size: 350%;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    top: 80%;
+    left: 35%;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.mermaid{
+    padding: 0;
+    margin:0;
+    position: fixed;
+    z-index: 100;
+    height: 120px;
+    width: 180px;
+    top: 50%;
+    left: 20%;
+   
+   
+}
+.score{
+    position: fixed;
+    z-index: 10;
+    height: 300%;
+    font-size: 300%;
+    font-weight: 100;
+    color: rgb(1, 8, 17);
+    top: 0;
+    right: 0;
+}
+* {
+    /* ca sa fie full screen */
+    margin: 0;
+    padding: 0;
+
+}
