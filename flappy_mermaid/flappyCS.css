@@ -71,3 +71,11 @@ body {
     right: 0;
 }
   
+.obstacle_sprite{
+    background-color: white;
+    position: fixed;
+    height: 70%;
+    width: 6%;
+    top: 40%;
+    left: 100%;
+}
