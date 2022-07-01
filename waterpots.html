@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> Water Pots Game </title>
+	<link rel = "stylesheet" type = "text/css" href = "waterpots.css">
+</head>
+
+<body>
+
+	<div id="game">
+
+		<div id="menu">
+
+			<div id="menu-heading"> Water Pots Game </div>
+			<div class="lvl" id="lame" onclick="OpenLevel(0);">Lame</div>
+			<div class="lvl" id="beginner" onclick="OpenLevel(1);">Beginner</div>
+			<div class="lvl" id="average" onclick="OpenLevel(2);">Average</div>
+			<div class="lvl" id="advanced" onclick="OpenLevel(3);">Advanced</div>
+			<div class="lvl" id="pro" onclick="OpenLevel(4);">Pro</div>
+			<br><br><br>
+			<div id = "info-btn" onclick="ShowInfo();">Info</div>
+
+		</div>
+
+		<div id="level"></div>
+		<div id="info-page">
+
+			<div id="info">
+				<div id="info-heading">Info</div>
+				<div id="info-text">Rule1,rule2,etc.</div>
+				<div id="back" onclick="HideInfo();"> Return </div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+
+<script type = "text/javascript" src="waterpots.js"></script>
+</html>
