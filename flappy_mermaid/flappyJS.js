@@ -19,13 +19,12 @@ document.addEventListener('keydown', (k) => {
 if (k.key == 'Enter'  ) {   
     
     mermaid.style.top = '30%';
-
+    
     actions.innerHTML = '';
     title.innerHTML = '';
-
     score_text.innerHTML = 'Score : ';
     score_points.innerHTML = '0';
-
+ 
    
 
     play();
@@ -52,7 +51,6 @@ function play() {
     
     
         mermaid.style.top = mermaid_properties.top + mermaidY + 'px';
-
         mermaid_properties = mermaid.getBoundingClientRect();
 
         requestAnimationFrame(gravity_function);
@@ -66,7 +64,7 @@ function play() {
             obstacle_distance = 0
             
          let random_obstacle_gap_pos = Math.floor(Math.random() * 50) +10;
-
+         
  ///stalpii de sus
         let new_obstacle = document.createElement('div');
         new_obstacle.className = 'obstacle_sprite';
@@ -83,7 +81,7 @@ function play() {
             
         document.body.appendChild(new_obstacle);
 
-        
+        new_obstacle.increase_score = true;
     
         }
         obstacle_distance+=1;
@@ -99,7 +97,18 @@ function play() {
             
         let obstacle_sprite_properties = e.getBoundingClientRect();
     
-        e.style.left = obstacle_sprite_properties.left - speed + 'px';
+        mermaid_properties = mermaid.getBoundingClientRect();
+            
+       
+            if ( obstacle_sprite_properties.right +speed >= mermaid_properties.left&&
+
+                 obstacle_sprite_properties.right < mermaid_properties.left)
+                  if(e.increase_score == true ) 
+            {
+                score_points.innerHTML = (parseInt(score_points.innerHTML) + 1);
+            }
+
+            e.style.left = obstacle_sprite_properties.left - speed + 'px';
          
         });
     
