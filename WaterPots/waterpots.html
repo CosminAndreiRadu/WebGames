@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WaterPots</title>
+	<link rel="stylesheet" type="text/css" href="waterpots.css">
+</head>
+<body>
+<div id = "game">
+    <div id = "menu">
+        <div id = "menu-heading">WaterPots</div>
+        <div class = "lvl" id = "lame" onclick = "OpenLevel(0);">EASY</div>
+        <div class = "lvl" id = "beginner" onclick = "OpenLevel(1);">MEDIUM</div>
+        <div class = "lvl" id = "average" onclick = "OpenLevel(2);">HARD</div>
+        <div class = "lvl" id = "advanced" onclick = "OpenLevel(3)">VERY HARD</div>
+        <div class = "lvl" id = "pro" onclick = "OpenLevel(7);">IMPOSSIBLE</div>
+        <br><br><br>
+        <div id = "info-btn" onclick = "ShowInfo();">Info</div>
+    </div>
+    <div id = "level"></div>
+    <div id = "info-page">
+        <div id = "info">
+            <div id = "info-heading">Info</div>
+            <div id = "info-text">
+							<p>In order to win the game you have to have some full pots in which the liquid is the same color.</p>
+							<p>For a move you have to pour if the glass is not full, from a pot with the same color as the top color of the glass</p></div>
+            <div id = "back" onclick = "HideInfo();">BACK</div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="waterpots.js"></script>
+</html>
