@@ -11,16 +11,7 @@ function gravity_function() {
         mermaidY = -8;
     }
     });
-
-    ///ciocnire top/bottom
-    if (mermaid_properties.top <= 0 || mermaid_properties.bottom >= background.bottom) {
-        state = 'end';
-        over.innerHTML="GAME OVER";
-        actions.innerHTML = 'Restart Game - Enter';
-        actions.style.left='500';
-       
-        return;
-        } 
+  
 
     mermaid.style.top = mermaid_properties.top + mermaidY + 'px';
     
@@ -77,15 +68,24 @@ function moving_function() {
     mermaid_properties = mermaid.getBoundingClientRect();
 
 
+        // ///ciocnire top/bottom 
+    if (mermaid_properties.top <= 0 || mermaid_properties.bottom >= background.bottom) {
+            state = 'end';
+            over.innerHTML="Game Over";
+            actions.innerHTML = 'Restart Game - Enter';
+            actions.style.left='500';
+           
+            return;
+            } 
 
     ///verificam daca se ciocneste de obstacole
     if (mermaid_properties.left < obstacle_sprite_properties.left +obstacle_sprite_properties.width &&
         mermaid_properties.left +mermaid_properties.width > obstacle_sprite_properties.left &&
-        mermaid_properties.top < obstacle_sprite_properties.top +obstacle_sprite_properties.height && //-18 pt bug
-        mermaid_properties.top +mermaid_properties.height > obstacle_sprite_properties.top  )//+18 pt bug 
+        mermaid_properties.top < obstacle_sprite_properties.top +obstacle_sprite_properties.height-18 && 
+        mermaid_properties.top +mermaid_properties.height > obstacle_sprite_properties.top +19 )
         {
             
-       ///incheiem jocul
+       /// jocul incheiat
         state = 'end';
         over.innerHTML="Game Over";
         actions.innerHTML = 'Restart Game - Enter';
@@ -144,7 +144,11 @@ if (k.key == 'Enter' && state!='playing') {
     
         });
 
-    mermaid.style.top = '30%';
+     mermaid.style.top = 50 +'%' ;
+
+   
+   
+    
     
     over.innerHTML=' ';
     actions.innerHTML = '';
