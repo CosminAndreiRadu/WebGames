@@ -9,19 +9,14 @@
 body {
     height: 100%;
     width: 100%;
- 
-}
-  
-.background{
-    height: 100%;
-    width: 100%;
     background-image: url("imagesMermaid/istockphoto-1143347756-170667a.jpg");
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     display: block;
-
-
+ 
 }
+  
+
 
 .title{
     position: fixed;
@@ -44,7 +39,23 @@ body {
     left: 30%;
     text-align: center;
     font-family: fantasy;
+    -webkit-text-stroke: 1px rgb(76, 240, 191); 
 }
+
+.over{
+    position: fixed;
+    z-index: 10;
+    font-size: 350%;
+    font-weight: 100;
+    color: rgb(230, 26, 26);
+    top: 60%;
+    left: 40%;
+    text-align: center;
+    font-family: fantasy;
+    /* -webkit-text-stroke: 2px rgb(1, 25, 56);  */
+    -webkit-text-stroke: 2px rgb(76, 240, 191); 
+}
+
 
 .mermaid{
     padding: 0;
@@ -69,6 +80,7 @@ body {
     color: rgb(1, 8, 17);
     top: 0;
     right: 0;
+    -webkit-text-stroke: 1px rgb(76, 240, 191); 
 }
   
 .obstacle_sprite{
@@ -79,3 +91,4 @@ body {
     top: 40%;
     left: 100%;
 }
+
